@@ -50,7 +50,7 @@ const addNewTask = () => {
         $alertInfo.innerText = ''
         createToolsArea();
     } else {
-        $alertInfo.innerText = 'Wpisz treść zadania!'
+        $alertInfo.innerText = 'Enter content of the task'
     }
 }
 
@@ -75,7 +75,7 @@ const createToolsArea = () => {
 
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('delete');
-    deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
+    deleteBtn.innerHTML = '<i class="fa-regular fa-square-minus"></i>';
 
     toolsPanel.appendChild(completeBtn);
     toolsPanel.appendChild(editBtn);
@@ -109,7 +109,7 @@ const changeTodo = () => {
         $popup.style.display = 'none';
         $popupInfo.innerText = '';
     } else {
-        $popupInfo.innerText = 'Musisz podać jakąś treść!';
+        $popupInfo.innerText = 'You have to enter content!';
     }
 }
 
@@ -118,7 +118,7 @@ const deleteTask = e => {
     deleteTodo.remove();
 
     if ($allTasks.length === 0) {
-        $alertInfo.innerText = 'Brak zadań na liście.';
+        $alertInfo.innerText = 'No tasks on the list';
     }
 }
 
